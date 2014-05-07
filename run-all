@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -xe
+
+# Run first exercise
+./exercise1/submissions/notnoop.py
+
+# Use first exercise output in 2
+cp exercise1/output/mean.csv exercise2/input/mean.csv
+./exercise2/submissions/notnoop.py
+
+# Use first two exercises in 3
+cp exercise1/output/*csv exercise3/input
+cp exercise2/output/*csv exercise3/input
+
+./exercise3/submissions/notnoop.py
